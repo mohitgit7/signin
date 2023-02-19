@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* color : #00ADB5 #EEF1FD*/
+h2{
+    font-family: 'Lobster', cursive;
+    color: #00ADB5;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #eef1fd;
+    /* min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex; */
+}
+.container{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 2rem;
+    border: 8px solid #eef1ee;
+    border-radius: 20px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1);
+}
+header .logo h2{
+    margin: 10px 20px;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+.container .form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.container .form h2{
+    color: #00ADB5;
+    font-weight: 550;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+.container .form .inputbox {
+    position: relative;
+    width: 300px;
+    margin-top: 10px;
+}
+#input-btn input{
+    background: #00ADB5;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 10px;
+    color: #eef1ee;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#input-btn input:hover{
+    background: #1d5558;
+}
+.container .form .inputbox input{
+    padding: 18px 30px 10px;
+    left: 5px;
+    border: none;
+    border-bottom: 2px solid #00ADB5;
+    width: 100%;
+    color: #1d5558;
+    font-weight: 350;
+    font-size: 1.1rem;
+    outline: none;
+    background: #eef1ee;
+    /* transition: 0.5s; */
+    caret-color: #00ADB5;
+    /* box-shadow: inset -3px -3px 10px rgba(255, 255, 255, 0.199),
+    inset 3px 3px 10px rgba(0, 0, 0, 0.11); */
+}
+.container .form .inputbox span {
+    position: absolute;
+    left: 5px;
+    padding: 15px 20px;
+    pointer-events: none;
+}
+.container .form .inputbox input:valid ~ span,
+.container .form .inputbox input:focus ~ span{
+    color: #00ADB5;
+    border: 1px solid #00ADB5;
+    transform: translateX(25px) translateY(-4px);
+    font-size: 0.7rem;
+    padding: 0 4px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.container .form .inputbox input:valid ~ i,
+.container .form .inputbox input:focus ~ i{
+    transform: rotate(-20deg);
+    transition: 0.5s;
+}
+.container .form .inputbox i{
+    position: absolute;
+    top: 17px;
+    left: 0;
+    width: 25px;
+    padding:2px 0;
+    color: #00ADB5;
+}
+.container .form p a {
+    color: #00ADB5;
+    font-weight: 500;
+}
+
+/* Sign In form */
+.container .form.signin,
+.container.signinForm .form.signup
+{
+    display: none;
+}
+.container.signinForm .form.signin {
+    display: flex;
+}
+

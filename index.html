@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Spodemy Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h2>Spodemy</h2>
+        </div>
+    </header>
+    <div class="container">
+        <div class="form signup" id="signup">
+            <h2>Sign Up</h2>
+            <div class="inputbox">
+                <input type="text" required = "required" id="name">
+                <i class="fa-regular fa-user"></i>
+                <span>User Name</span>
+            </div>
+            <div class="inputbox">
+                <input type="email" required = "required" id="mail">
+                <i class="fa-regular fa-envelope"></i>
+                <span>E-mail</span>
+            </div>
+            <div class="inputbox">
+                <input type="password" required = "required" id="pass">
+                <i class="fa-solid fa-lock"></i>
+                <span>Create Password</span>
+            </div>
+            <div class="inputbox">
+                <input type="password" required = "required" id="pass-conf">
+                <i class="fa-solid fa-lock"></i>
+                <span>Confirm Password</span>
+            </div>
+            <div class="inputbox" id="input-btn">
+                <input type="submit" value="Create Account" id="btn-up" onclick="createbtn()">
+            </div>
+            <p>Have an Account ! <a href="#" class="login">Sign In</a></p>
+        </div>
+
+        <!-- For Sign In -->
+
+        <div class="form signin" id="signin">
+            <h2>Sign In</h2>
+            <div class="inputbox" id="input-box">
+                <input type="text" required = "required" id="namee">
+                <i class="fa-regular fa-user"></i>
+                <span>User Name</span>
+            </div>
+            <div class="inputbox" id="input-box">
+                <input type="password" required = "required" id="pass">
+                <i class="fa-solid fa-lock"></i>
+                <span>Password</span>
+            </div>
+            <div class="inputbox" id="input-btn" >
+                <input type="submit" value="Login" id="btn-in" onclick="loginbtn()">
+            </div>
+            <label for="remind">
+                <input type="checkbox" name="remind" id="remember-me"> Remember Me !
+            </label>
+            <p>Need To Remember ? <a href="#" class="Signup"> Sign Up</a></p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/0f339bddc5.js" crossorigin="anonymous"></script>
+</body>
+</html>
