@@ -11,32 +11,63 @@ signup.onclick = function(){
 }
 
 
-// For Sign in section script
+// For Sign Up section script
 
-var user = document.querySelector(`#namee`);
-var passcode = document.querySelector(`#pass`);
-var objectUser = [
-    {
-        username: "Mohit",
-        userpasscode: "Rohit"
-    },
-    {
-        userName: "Mohit7",
-        userPasscode: "Mohit"
-    }
-];
+function createbtn() {
+    var uname = document.getElementById("uname").value;
+    var mail = document.getElementById("mail").value;
+    var pwd = document.getElementById("pass").value;
+    var cpwd = document.getElementById("pass-conf").value;
 
-function loginbtn(){
-    var username = document.getElementById("namee").value;
-    var userpasscode = document.getElementById("pass").value;
+    var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+	var letters = /^[A-Za-z]+$/;
+	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-   for(i = 0; i < objectUser.length; i++){
-    if((username == objectUser[i].username) && (userpasscode == objectUser[i].userpasscode)){
-        console.log(username + "You are logged in");
-        // alert(username + "You are logged in !!");
-        return;
+    if(uname == ''){
+        alert("Enter your user name");
+    }else if(!letters.test(uname)){
+        alert("User name field required only alphabet characters");
+    }else if(mail == ''){
+        alert("Please enter your user e-mail");
+    }else if(!filter.test(mail)){
+        alert("Please enter a valid mail id");
+    }else if(pwd == ''){
+        alert("Enter your password");
+    }else if(!pwd_expression.test(pwd)){
+        alert("Upper case, Lower case, Special character and Numeric letter are required in Password filed");
+    }else if(cpwd == ''){
+        alert("Please confirm password");
+    }else if(pwd != cpwd){
+        alert("Password didn't match");
+    }else if(document.getElementById("pass-conf").value.length < 6){
+        alert("Minimum password length must be 6");
+    }else if(document.getElementById("pass-conf").value.length > 12){
+        alert("Password max length must be 12");
+    }else{
+        alert(uname + ", you have created your Account");
     }
 }
-console.log("Enter a valid data");
-    
+
+// Sign In section script
+
+function loginbtn(){
+    var uname = document.getElementById("uname1").value;
+    var pwd = document.getElementById("pass1").value;
+
+    var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+	var letters = /^[A-Za-z]+$/;
+
+    if(uname == ''){
+        alert("Enter your user name");
+    }else if(!letters.test(uname)){
+        alert("User name field required only alphabet characters");
+    }else if(pwd == ''){
+        alert("Enter your password");
+    }else if(!pwd_expression.test(pwd)){
+        alert("Upper case, Lower case, Special character and Numeric letter are required in Password filed");
+    }else if(uname == '' && pwd == ''){
+        alert("Please fill the username and password");
+    }else{
+        alert(uname + ", you are logged in");
+    }
 }
